@@ -1,7 +1,6 @@
 'use strict';
 
 function getYearOfBirth(age) {
-
   return 2018 - age;
 }
 
@@ -16,8 +15,6 @@ function createGreeting(name, age) {
 }
 
 try {
-
-
   const greeting1 = createGreeting('John' , 30);
   console.log(greeting1);
 } catch(e) {
