@@ -17,6 +17,28 @@ function toInfinity(num) {
   }
 }
 
+function crackingTheCode(message) {
+  const wordsArr = message.split(' ');
+  const decodedWord =[];
+  for (const item in wordsArr) {
+    const word = wordsArr[item];
+    if(word.charAt(0) === 'a') {
+      decodedWord.push(word.charAt(1));
+    } else if(word.charAt(0) === 'b') {
+      decodedWord.push(word.charAt(2));
+    } else if(word.charAt(0) === 'c') {
+      decodedWord.push(word.charAt(3));
+    } else if(word.charAt(0) === 'd') {
+      decodedWord.push(word.charAt(4));
+    } else {
+      decodedWord.push(' ');
+    }
+  }
+  return decodedWord.join('');
+}
+console.log(crackingTheCode('craft block argon meter bells brown croon droop'));
+
+
 function daysInMonth(month, leapyear) {
 
   switch (month) {
@@ -71,3 +93,4 @@ try {
 } catch(e) {
   console.error(e.message);
 }
+
