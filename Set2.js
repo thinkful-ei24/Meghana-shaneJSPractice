@@ -99,3 +99,29 @@ try {
   console.error(e.message);
 }
 
+//Rock Paper Sissors function
+var input = prompt("enter either 1 for rock,2 for paper,3 for scissors to play")
+function RockPaperSissors(input) {
+  let computerChoice = Math.floor(Math.random()*3)+1;
+  if (input < 1 || input >3){
+    throw ErrorEvent('please pick 1,or 2, or 3');
+  }
+  else if (input === computerChoice){
+    console.log("its a tie")
+  }
+  else if (input === 1 && computerChoice === 2){
+    console.log ("computer wins")
+  }
+  else console.log ("player wins");
+  else if (input === 2 && computerChoice === 3){
+    console.log ("computer wins");
+  }
+    else {console.log ("player wins";)
+  }
+  else if (input === 3 && computerChoice === 1){
+    console.log("computer wins");
+
+  }
+  else console.log("you win");
+
+}
