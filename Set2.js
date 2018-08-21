@@ -18,23 +18,28 @@ function toInfinity(num) {
 }
 
 function crackingTheCode(message) {
-  const wordsArr = message.split(' ');
-  const decodedWord =[];
-  for (const item in wordsArr) {
-    const word = wordsArr[item];
-    if(word.charAt(0) === 'a') {
-      decodedWord.push(word.charAt(1));
-    } else if(word.charAt(0) === 'b') {
-      decodedWord.push(word.charAt(2));
-    } else if(word.charAt(0) === 'c') {
-      decodedWord.push(word.charAt(3));
-    } else if(word.charAt(0) === 'd') {
-      decodedWord.push(word.charAt(4));
-    } else {
-      decodedWord.push(' ');
+  const word = message.split('');
+
+  const arr = [];
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === "a") {
+      arr.push(word[1]);
     }
+    if (word[i] === "b") {
+      arr.push(word[2]);
+    }
+    if (word[i] === "c") {
+      arr.push(word[3]);
+    }
+    if (word[i] === "d") {
+      arr.push(word[4]);
+    }
+    else arr.push(" ");
+
   }
-  return decodedWord.join('');
+  return arr.join("");
+}
 }
 console.log(crackingTheCode('craft block argon meter bells brown croon droop'));
 
